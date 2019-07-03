@@ -19,6 +19,11 @@
 	</servlet>
 
 	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>/resources/core/css/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
 		<servlet-name>spring-web</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>

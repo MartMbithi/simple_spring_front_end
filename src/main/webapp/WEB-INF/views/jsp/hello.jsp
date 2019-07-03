@@ -3,79 +3,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Course Management System In Spring Framework</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-<spring:url value="/resources/core/css/hello.css" var="coreCss" />
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<spring:url value="/resources/core/css/bootstrap.min.css" var="bootstrapCss" />
-<link href="${bootstrapCss}" rel="stylesheet" />
-<link href="${coreCss}" rel="stylesheet" />
+    <title> EduSite Home | Spring Course Management System</title>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <spring:url value="/resources/core/css/bootstrap.min.css" var="bootstrapCss" />
+
+    <!-- Font Awesome Icon -->
+    <spring:url value="/resources/core/css/font-awesome.min.css" var="fontawesomeCss" />
+
+    <!--Font Awesome CDN-->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Custom stlylesheet -->
+    <spring:url value="/resources/core/css/style.css" var="appCss" />
+
+    <!-- Initialization-->
+    <link href="${bootstrapCss}" rel="stylesheet" />
+    <link href="${fontawesomeCss}" rel="stylesheet" />
+    <link href="${appCss}" rel="stylesheet" />
+
+
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
 </head>
-<style>
-	.bd-placeholder-img {
-		font-size: 1.125rem;
-		text-anchor: middle;
-		-webkit-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
-	}
 
-	@media (min-width: 768px) {
-		.bd-placeholder-img-lg {
-			font-size: 3.5rem;
-		}
-	}
-</style>
+<!-- Header -->
+<header id="header" class="transparent-nav">
+    <div class="container">
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
-	<div class="navbar-header">
-		<a class="navbar-brand " href="/spring3">Home </a>
-		<a class ="navbar-brand" href="/aboutus">About Us</a>
-		<a class ="navbar-brand" href="/courses">Courses</a>
-		<a class ="navbar-brand" href="/login">Log In</a>
-		<a class ="navbar-brand" href="/signup">Sign Up</a>
+        <div class="navbar-header">
+            <!-- Logo -->
+            <div class="navbar-brand">
+                <a class="logo" href="/spring3">
+                    <spring:url value="/resources/core/img/logo-alt.png" var="imageLogo" />
+                    <img src="${imageLogo}" alt="logo">
+                </a>
+            </div>
+            <!-- /Logo -->
 
-	</div>
-  </div>
-</nav>
+            <!-- Mobile toggle -->
+            <button class="navbar-toggle">
+                <span></span>
+            </button>
+            <!-- /Mobile toggle -->
+        </div>
 
- <body >
+        <!-- Navigation -->
+        <nav id="nav">
+            <ul class="main-menu nav navbar-nav navbar-right">
+                <li class="active"><a href="/spring3">Home</a></li>
+                <li><a href="/spring3/courses">Courses</a></li>
+                <li><a href="/spring3/get_started">Get Started</a></li>
+                <li><a href="/spring3/login">Log In</a></li>
+            </ul>
+        </nav>
+        <!-- /Navigation -->
 
- <body class="text-center">
- <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-	 <header class="masthead mb-auto">
-		 <div class="inner">
-			 <h3 class="masthead-brand"></h3>
-			 <nav class="nav nav-masthead justify-content-center">
-				 <a class="nav-link active" href="#"></a>
-				 <a class="nav-link" href="#"></a>
-				 <a class="nav-link" href="#"></a>
-			 </nav>
-		 </div>
-	 </header>
+    </div>
+</header>
+<!-- /Header -->
+<!-- Home -->
+<div id="home" class="hero-area">
 
-	 <main role="main" class="inner cover">
-		 <h1 class="cover-heading">E-Course Management System</h1>
-		 <p class="lead">Robust, OpenSource Learning Platform Built On Spring MVC Framework.</p>
+    <!-- Backgound Image -->
+    <spring:url value="/resources/core/img/home-background.jpg" var="BackgroudImage" />
+    <div class="bg-image bg-parallax overlay" style="background-image:url(${BackgroudImage})"></div>
+    <!-- /Backgound Image -->
 
-	 </main>
+    <div class="home-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2 class="white-text"> EduSite Spring Powered Course Management System</h2>
+                    <p class="lead white-text">Robust, OpenSource E-Learning Platform Built  To Increase Your Satisfaction And Fun From Online Learning & Training.  </p>
+                    <a class="main-button icon-button" href="#about">Get Started!</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-	 <footer class="mastfoot mt-auto">
-		 <div class="inner">
-			 <p>Powered By <a href="https://getbootstrap.com/">Bootstrap </a> | <a href="https://spring.io">Spring Framework</a> | <a href="https://martdev.info">MartDevelopers</a>.</p>
-		 </div>
-	 </footer>
- </div>
- </body>
+</div>
+<!-- /Home -->
 
-<spring:url value="/resources/core/css/hello.js" var="coreJs" />
-<spring:url value="/resources/core/css/bootstrap.min.js" var="bootstrapJs" />
+<!-- About -->
+<div id="about" class="section">
 
-<script src="${coreJs}"></script>
-<script src="${bootstrapJs}"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- container -->
+    <div class="container">
 
-</body>
-</html>
+        <!-- row -->
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="section-header">
+                    <h2>Welcome to EduSite Spring Powered Course Management System </h2>
+                    <p class="lead"> The fastest path to better training</p>
+                </div>
+
+                <!-- feature -->
+                <div class="feature">
+
+                    <i class="feature-icon  fa fa-mobile-phone"></i>
+                    <div class="feature-content">
+                        <h4>Mobile ready </h4>
+                        <p>A Course Management System  built from scratch to work with modern mobile devices. Native mobile applications available for iOS and Android.</p>
+                    </div>
+                </div>
+                <!-- /feature -->
+
+                <!-- feature -->
+                <div class="feature">
+                    <i class="feature-icon fa fa-bolt"></i>
+                    <div class="feature-content">
+                        <h4>Complete and powerful</h4>
+                        <p>Support for SCORM & Tin Can (xAPI), notifications, course selling, video-conferencing, gamification, extensible user profiles etc. Everything you need is here! </p>
+                    </div>
+                </div>
+                <!-- /feature -->
+
+                <!-- feature -->
+                <div class="feature">
+                    <i class="feature-icon fa fa-cogs"></i>
+                    <div class="feature-content">
+                        <h4>Easy to maintain </h4>
+                        <p>Built with a preference for conventions over configurations. This means fewer things to configure, more time to deliver great online training. </p>
+                    </div>
+                </div>
+                <!-- /feature -->
+
+            </div>
+
+            <div class="col-md-6">
+                <div class="about-img">
+                    <spring:url value="/resources/core/img/about.png" var="aboutPicture" />
+
+                    <img src="${aboutPicture}" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- row -->
+
+    </div>
+    <!-- container -->
+</div>
+<!-- /About -->
+
+
+
+<!-- Footer -->
+<footer id="footer" class="section">
+
+    <!-- container -->
+    <div class="container">
+
+        <!-- row -->
+        <div class="row">
+
+            <!-- footer logo -->
+            <div class="col-md-6">
+                <div class="footer-logo">
+                    <spring:url value="/resources/core/img/logo.png" var="LogoColor" />
+                    <a class="logo" href="/spring3">
+                        <img src="${LogoColor}" alt="logo">
+                    </a>
+                </div>
+            </div>
+            <!-- footer logo -->
+
+            <!-- footer nav -->
+            <div class="col-md-6">
+                <ul class="footer-nav">
+                    <li><a href="/spring3">Home</a></li>
+                    <li><a href="/spring3/courses">Courses</a></li>
+                    <li><a href="/spring3/get_started">Get Started</a></li>
+                    <li><a href="/spring3/login">Log In</a></li>
+                </ul>
+            </div>
+            <!-- /footer nav -->
+
+        </div>
+        <!-- /row -->
+
+        <!-- row -->
+        <div id="bottom-footer" class="row">
+
+            <!-- social -->
+            <div class="col-md-4 col-md-push-8">
+                <ul class="footer-social">
+                    <li><a href="https://www.facebook.com/martin.mbithi.73" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/martinezmbithi" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://github.com/MartMbithi" target="_blank" class="github"><i class="fa fa-github"></i></a></li>
+                    <li><a href=https://www.instagram.com/mart_mbithi/" target="_blank" class="instagram"><i class="fa fa-instagram"></i></a></li>
+
+                </ul>
+            </div>
+            <!-- /social -->
+
+            <!-- copyright -->
+            <div class="col-md-8 col-md-pull-4">
+                <div class="footer-copyright">
+                    <span>&copy; Copyright 2019. All Rights Reserved. | Made with  <i class="fa fa-heart" aria-hidden="true"></i>  <i class="fa fa-coffee" aria-hidden="true"></i>  <i class="fa fa-leaf" aria-hidden="true"></i> by <a target="_blank" href="https://martmbithi.github.io">Group One | MartDevelopers</a></span>
+                </div>
+            </div>
+            <!-- /copyright -->
+
+        </div>
+        <!-- row -->
+
+    </div>
+    <!-- /container -->
+
+</footer>
+<!-- /Footer -->
+
+<!-- preloader -->
+<div id='preloader'><div class='preloader'></div></div>
+<!--preloader -->
+
+<!--initialize footer variables-->
+<spring:url value="/resources/core/js/bootstrap.min.js" var="bootstrapJs" />
+<spring:url value="/resources/core/js/jquery.min.js" var="jQuerry" />
+<spring:url value="/resources/core/js/main.js" var="mainJs" />
+
+<script src="${bootstrapCss}"></script>
+<script src="${jQuerry}"></script>
+<script src="${mainJs}"></script>
+
+
+
